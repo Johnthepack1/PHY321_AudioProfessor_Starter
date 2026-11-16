@@ -47,7 +47,6 @@ private struct ProfessorDashboard: View {
                         helpCard
                         Text("OFFLINE BY DESIGN  ·  iOS 15+  ·  V2.1")
                             .font(.system(size: 10, weight: .semibold, design: .rounded))
-                            .tracking(1.6)
                             .foregroundColor(Brand.muted)
                             .padding(.top, 3)
                             .padding(.bottom, 12)
@@ -66,11 +65,9 @@ private struct ProfessorDashboard: View {
             VStack(alignment: .leading, spacing: 3) {
                 Text("PHY 321")
                     .font(.system(size: 35, weight: .black, design: .rounded))
-                    .tracking(-1.4)
                     .foregroundColor(Brand.ink)
                 Text("YOUR OFFLINE AUDIO PROFESSOR")
                     .font(.system(size: 10, weight: .bold, design: .rounded))
-                    .tracking(1.7)
                     .foregroundColor(Brand.muted)
             }
             Spacer()
@@ -89,7 +86,6 @@ private struct ProfessorDashboard: View {
             HStack {
                 Label(tutor.focus.rawValue.uppercased(), systemImage: "book.closed.fill")
                     .font(.system(size: 10, weight: .heavy, design: .rounded))
-                    .tracking(1.1)
                     .foregroundColor(Brand.gold)
                 Spacer()
                 HStack(spacing: 6) {
@@ -97,7 +93,6 @@ private struct ProfessorDashboard: View {
                         .frame(width: 7, height: 7)
                     Text(tutor.phase.rawValue.uppercased())
                         .font(.system(size: 10, weight: .heavy, design: .rounded))
-                        .tracking(1)
                         .foregroundColor(.white.opacity(0.92))
                 }
             }
@@ -126,7 +121,6 @@ private struct ProfessorDashboard: View {
             HStack {
                 Text("LESSON \(tutor.playlistPosition) OF \(tutor.playlistCount)")
                     .font(.system(size: 10, weight: .bold, design: .rounded))
-                    .tracking(1)
                     .foregroundColor(.white.opacity(0.75))
                 Spacer()
                 if tutor.savedBookmarkAvailable {
@@ -197,7 +191,6 @@ private struct ProfessorDashboard: View {
             VStack(alignment: .leading, spacing: 13) {
                 Text("LEARNING MODE")
                     .font(.system(size: 10, weight: .bold, design: .rounded))
-                    .tracking(1.1)
                     .foregroundColor(Brand.muted)
                 Picker("Learning mode", selection: Binding(get: { tutor.mode }, set: tutor.setMode)) {
                     ForEach(StudyMode.allCases) { mode in
@@ -213,7 +206,6 @@ private struct ProfessorDashboard: View {
                     VStack(alignment: .leading, spacing: 4) {
                         Text("TOPIC FOCUS")
                             .font(.system(size: 10, weight: .bold, design: .rounded))
-                            .tracking(1.1)
                             .foregroundColor(Brand.muted)
                         Picker("Topic focus", selection: Binding(get: { tutor.focus }, set: tutor.setFocus)) {
                             ForEach(StudyFocus.allCases) { focus in
@@ -226,7 +218,6 @@ private struct ProfessorDashboard: View {
                     VStack(alignment: .trailing, spacing: 4) {
                         Text("SESSION LENGTH")
                             .font(.system(size: 10, weight: .bold, design: .rounded))
-                            .tracking(1.1)
                             .foregroundColor(Brand.muted)
                         Picker("Session length", selection: Binding(get: { tutor.sessionMinutes }, set: tutor.setSessionMinutes)) {
                             Text("Continuous").tag(0)
