@@ -14,6 +14,8 @@ targets:
       path: App/Info.plist
       properties:
         CFBundleDisplayName: PHY321 Professor
+        CFBundleShortVersionString: 2.1.0
+        CFBundleVersion: '3'
         NSMicrophoneUsageDescription: This app uses your microphone to hear short answers during offline study sessions.
         NSSpeechRecognitionUsageDescription: This app transcribes short study answers locally on your iPhone when on-device recognition is available.
         UIBackgroundModes:

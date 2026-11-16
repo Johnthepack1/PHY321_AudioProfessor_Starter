@@ -14,6 +14,13 @@ jobs:
           xcodebuild -version
       - name: Install XcodeGen
         run: brew install xcodegen
+      - name: Run offline curriculum and recognition tests
+        run: |
+          swiftc \
+            App/Lessons.swift App/TeachingExtras.swift App/StudyModels.swift \
+            App/EquationDrills.swift App/SpeechText.swift App/AnswerEvaluator.swift \
+            AnswerEvaluatorTests.swift -o evaluator_tests
+          ./evaluator_tests
       - name: Generate iOS project
         run: xcodegen generate
       - name: Build unsigned app for real iPhones

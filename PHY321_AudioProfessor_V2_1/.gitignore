@@ -1,9 +1,0 @@
-.DS_Store
-*.xcuserstate
-*.xcworkspace/
-*.xcodeproj/
-output/
-DerivedData/
-Payload/
-*.ipa
-App/Info.plist
