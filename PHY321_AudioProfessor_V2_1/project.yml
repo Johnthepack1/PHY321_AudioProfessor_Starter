@@ -1,0 +1,30 @@
+name: PHY321AudioProfessor
+options:
+  bundleIdPrefix: org.phy321
+settings:
+  SWIFT_VERSION: '5.0'
+targets:
+  PHY321AudioProfessor:
+    type: application
+    platform: iOS
+    deploymentTarget: '15.0'
+    sources:
+      - path: App
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: PHY321 Professor
+        CFBundleShortVersionString: 2.1.0
+        CFBundleVersion: '3'
+        NSMicrophoneUsageDescription: This app uses your microphone to hear short answers during offline study sessions.
+        NSSpeechRecognitionUsageDescription: This app transcribes short study answers locally on your iPhone when on-device recognition is available.
+        UIBackgroundModes:
+          - audio
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: org.phy321.audio.professor
+        TARGETED_DEVICE_FAMILY: '1'
+        SWIFT_VERSION: '5.0'
+        CODE_SIGNING_ALLOWED: 'NO'
